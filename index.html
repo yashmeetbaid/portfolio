@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yashmeet Baid | AI, Data Systems & Research</title>
+<meta name="description" content="Yashmeet Baid is a Computer Science (Data Science) student at RV University in Bengaluru building full-stack data systems, ML models and research.">
+<meta name="theme-color" content="#efe9dd">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23141414'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23efe9dd' font-family='serif'%3EY%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#efe9dd;--card:#f8f4ec;--ink:#141414;--mut:#6b6559;--line:#d9d1c1;--inv:#efe9dd;--dot:20,20,20}
+:root[data-theme=dark]{--bg:#131211;--card:#1c1a18;--ink:#efe9dd;--mut:#9b9487;--line:#2d2a26;--inv:#131211;--dot:239,233,221}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 Geist,system-ui,sans-serif;transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(32px,5vw,46px);line-height:1.05;margin-bottom:8px}
+.sub{color:var(--mut);max-width:56ch;margin-bottom:32px}
+/* nav */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:4px;align-items:center;background:color-mix(in srgb,var(--card) 85%,transparent);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;padding:6px;max-width:calc(100vw - 20px)}
+nav a,nav button{font:500 14px Geist,sans-serif;text-decoration:none;padding:7px 14px;border-radius:999px;border:0;background:none;color:var(--ink);cursor:pointer;transition:background .2s,color .2s;white-space:nowrap}
+nav a:hover,nav button:hover,nav a.on{background:var(--ink);color:var(--inv)}
+nav .hide-s{display:inline}
+@media(max-width:640px){nav .hide-s{display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;border:0;padding:120px 0 60px;overflow:hidden}
+#dots{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .wrap{position:relative;z-index:1;pointer-events:none}
+.hero .wrap>*{pointer-events:auto}
+h1{font-size:clamp(64px,13vw,150px);line-height:.92;letter-spacing:-.03em;margin:10px 0 24px}
+h1 span{display:inline-block;transition:transform .35s cubic-bezier(.3,1.6,.5,1),font-style .2s}
+h1 span:hover{transform:translateY(-10px) rotate(-4deg);font-style:italic}
+.lead{font-size:clamp(18px,2.2vw,22px);max-width:34em;margin-bottom:28px}
+.lead b{font-weight:500}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;border:1px solid var(--ink);text-decoration:none;font-weight:500;transition:transform .15s,background .2s,color .2s;will-change:transform}
+.btn.fill{background:var(--ink);color:var(--inv)}
+.btn:hover{background:var(--ink);color:var(--inv)}
+.btn.fill:hover{background:transparent;color:var(--ink)}
+.clock{margin-top:36px;color:var(--mut);font-variant-numeric:tabular-nums}
+.load{opacity:0;transform:translateY(14px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+.load:nth-child(2){animation-delay:.12s}.load:nth-child(3){animation-delay:.24s}.load:nth-child(4){animation-delay:.36s}.load:nth-child(5){animation-delay:.48s}
+@keyframes up{to{opacity:1;transform:none}}
+/* readings */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.box small{color:var(--mut);display:block}
+.big{font-size:44px;line-height:1.1;font-variant-numeric:tabular-nums}
+.logos{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:14px}
+/* logos */
+.lg{width:30px;height:30px;border-radius:8px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;flex:none;font:600 13px Geist,sans-serif;color:#141414}
+.lg img{width:20px;height:20px;object-fit:contain}
+.lg.xl{width:48px;height:48px;border-radius:12px;font-size:18px}
+.lg.xl img{width:32px;height:32px}
+/* fields */
+.field{border-top:1px solid var(--line);padding:20px 0;cursor:pointer}
+.field:last-child{border-bottom:1px solid var(--line)}
+.field h3{font-size:clamp(26px,4vw,36px);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.field h3::after{content:"+";font:300 30px Geist;transition:transform .3s}
+.field.open h3::after{transform:rotate(45deg)}
+.field p{max-height:0;overflow:hidden;color:var(--mut);transition:max-height .4s ease,margin .3s;max-width:60ch}
+.field.open p,.field:hover p{max-height:120px;margin-top:8px}
+/* experience */
+.job{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:26px 0;border-top:1px solid var(--line)}
+.job h3{font-size:26px;line-height:1.2}
+.when{color:var(--mut);font-size:14px;margin-bottom:8px}
+.job ul{padding-left:18px;color:var(--mut);display:grid;gap:6px;max-width:70ch}
+.job li::marker{color:var(--ink)}
+/* projects */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.filters button{font:500 14px Geist;padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer;transition:.2s}
+.filters button.on,.filters button:hover{background:var(--ink);color:var(--inv);border-color:var(--ink)}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;cursor:pointer;transition:transform .25s,border-color .25s;transform-style:preserve-3d}
+.card:hover{border-color:var(--ink)}
+.card h3{font-size:28px;line-height:1.1;margin-bottom:8px}
+.card p{color:var(--mut);font-size:15px}
+.card .more{max-height:0;overflow:hidden;transition:max-height .4s}
+.card.open .more{max-height:260px;margin-top:12px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.tags span{font-size:12px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--mut)}
+.card.hide{display:none}
+/* two-col lists */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.item{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.item b{font-weight:500;display:block}
+.item span{color:var(--mut);font-size:14px}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skills span{padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:14px;transition:.2s;cursor:default}
+.skills span:hover{background:var(--ink);color:var(--inv);transform:translateY(-3px)}
+/* footer */
+footer{border-top:1px solid var(--line);padding:72px 0 40px}
+footer .big{font-size:clamp(34px,6vw,64px);max-width:16em;margin-bottom:28px}
+.soc{display:flex;gap:18px;flex-wrap:wrap;margin:28px 0;color:var(--mut)}
+.soc a{text-decoration:none;border-bottom:1px solid var(--line)}.soc a:hover{color:var(--ink);border-color:var(--ink)}
+.fine{color:var(--mut);font-size:13px}
+/* ask */
+#ask{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:50;display:none;place-items:start center;padding-top:14vh}
+#ask.on{display:grid}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;width:min(560px,92vw);padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.panel input{width:100%;font:500 18px Geist;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+#ans{margin:14px 4px;min-height:48px;color:var(--ink)}
+.sug{display:flex;gap:8px;flex-wrap:wrap}
+.sug button{font:400 13px Geist;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.sug button:hover{background:var(--ink);color:var(--inv)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.load{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <a href="#top" class="on">Home</a><a href="#education" class="hide-s">Education</a><a href="#work">Work</a><a href="#projects">Projects</a><a href="#research" class="hide-s">Achievements</a><a href="#about" class="hide-s">About</a>
+  <button id="askBtn" aria-label="Talk to my site">Ask</button>
+  <button id="theme" aria-label="Toggle light or dark theme">◐</button>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="dots" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="load" style="color:var(--mut)">Computer Science student in Bengaluru</p>
+    <h1 class="serif load" aria-label="Yashmeet Baid" id="name"></h1>
+    <p class="lead load">Final-year BTech student specializing in <b>data science</b>. I turn messy scientific and business data into reliable systems and models, and I’ve presented my research at IEEE ICCCNT as first author.</p>
+    <div class="row load">
+      <a class="btn fill mag" href="mailto:yashmeet1807@gmail.com">Email me</a>
+      <a class="btn mag" href="https://linkedin.com/in/yashmeetbaid" target="_blank" rel="noopener">Let’s talk on LinkedIn</a>
+    </div>
+    <p class="clock load">Bengaluru · <span id="clk">--:--:--</span> IST</p>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="education" style="border-top:0;padding-top:24px">
+  <h2 class="serif">Education</h2>
+  <p class="sub">Where I study and what I’ve covered.</p>
+  <div class="job" style="border-top:1px solid var(--line)"><div id="eduLogo"></div><div>
+    <h3 class="serif">BTech (Hons) in Computer Science, Data Science</h3>
+    <div class="when">RV University, Bengaluru · Minor in Fintech · Sept 2023 – June 2027 · CGPA 8.36/10</div>
+    <div class="skills" id="course" style="margin-top:12px"></div>
+  </div></div>
+</section>
+
+<section id="fields">
+  <h2 class="serif">Fields of work</h2>
+  <p class="sub">Tap a field to read what I do in it.</p>
+  <div id="fieldList"></div>
+</section>
+
+<section id="work">
+  <h2 class="serif">Experience</h2>
+  <p class="sub">Internships and research, most recent first.</p>
+  <div id="jobs"></div>
+</section>
+
+<section id="projects">
+  <h2 class="serif">Selected work</h2>
+  <p class="sub">Filter by area, tap a card for details.</p>
+  <div class="filters" id="filters"></div>
+  <div class="proj" id="projGrid"></div>
+</section>
+
+<section id="research">
+  <h2 class="serif">Achievements</h2>
+  <p class="sub">Papers, conferences and competitions.</p>
+  <div id="wins"></div>
+</section>
+
+<section id="about">
+  <h2 class="serif">About &amp; toolkit</h2>
+  <div class="two">
+    <div>
+      <p class="sub" style="margin-bottom:20px">I study Computer Science with a specialization in Data Science and a minor in Fintech (CGPA 8.36). I like work where a model, a database and a usable interface all have to agree. I also mentor student projects, which RV University recognised for excellence.</p>
+      <h3 class="serif" style="font-size:28px;margin:24px 0 12px">Certifications</h3>
+      <div id="certs"></div>
+    </div>
+    <div>
+      <h3 class="serif" style="font-size:28px;margin-bottom:12px">Languages</h3>
+      <div class="skills" id="langs"></div>
+      <h3 class="serif" style="font-size:28px;margin:28px 0 12px">Tools &amp; platforms</h3>
+      <div class="skills" id="tools"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="big serif">Good systems start with people who care enough to build them.</p>
+    <a class="btn fill mag" href="mailto:yashmeet1807@gmail.com">yashmeet1807@gmail.com</a>
+    <div class="soc"><a href="https://github.com/yashmeetbaid" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/yashmeetbaid" target="_blank" rel="noopener">LinkedIn</a></div>
+    <p class="fine">© 2026 Yashmeet Baid · Press <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd> to talk to this site</p>
+  </div>
+</footer>
+
+<div id="ask" role="dialog" aria-label="Talk to my site">
+  <div class="panel">
+    <input id="q" placeholder="Ask about my experience, projects, skills…" autocomplete="off">
+    <div id="ans">Hi, I’m a tiny guide to this site. Try a question below.</div>
+    <div class="sug" id="sug"></div>
+  </div>
+</div>
+
+<script>
+/* ===== CONTENT: edit this block to update the site ===== */
+const logo=d=>`https://www.google.com/s2/favicons?domain=${d}&sz=128`;
+const fields=[
+ ["AI & machine learning","Classification models for nanomaterials, drug–drug interaction prediction, NLP modules and a healthcare RAG assistant."],
+ ["Data systems & engineering","FastAPI, PostgreSQL, Celery and Redis pipelines that turn raw scientific data into structured, trackable results."],
+ ["Scientific research","Nanomaterial classification from SEM images, published work on cybersecurity, and conference presentations."],
+ ["Cybersecurity","First-author paper on quantum-resistant zero trust, plus an Ideathon win in the cybersecurity domain."]
+];
+const jobs=[
+ {co:"CompagOS",d:"",m:"C",role:"Software Development Intern",loc:"Switzerland, Remote",when:"February 2026 – June 2026",pts:["Built a full-stack web app (FastAPI, PostgreSQL, Celery, Redis) that automates a manual CT scan data pipeline, cutting onboarding from 90+ minutes to under 20.","Designed dynamic role-based access control so admins can create custom roles with granular per-project permissions.","Engineered a job execution engine that runs raw .isq CT scans through a 4-script pipeline into CSVs, plots and reports with live status tracking."]},
+ {co:"ITC Limited",d:"itcportal.com",m:"ITC",role:"Intern",loc:"Bangalore, India",when:"June 2025 – July 2025",pts:["Developed a Streamlit analytics platform integrating 8+ ML algorithms and deep learning, with 78–96% accuracy across tasks.","Built end-to-end workflows handling 15,000+ records per second, with dashboards responding in under 2 seconds.","Shipped NLP modules (F1 0.73–0.89) and a nutrition tracker covering 8,247+ food items at 99.2% accuracy."]},
+ {co:"RV University",d:"rvu.edu.in",m:"RV",role:"Student Research Assistant",loc:"Bengaluru, India",when:"November 2023 – March 2026",pts:["Collected and analysed large datasets to classify nanomaterials.","Applied Python, TensorFlow and scikit-learn models to improve accuracy and efficiency.","Worked with senior researchers to design experiments, validate models and present findings."]}
+];
+const projects=[
+ {t:"ReachInbox",k:"web",p:"Full-stack email outreach platform with campaign management and automated scheduling.",m:"Redis-backed job queues and Dockerized services handle asynchronous email processing and scalable deployment.",tags:["Redis","Docker","Full-stack"]},
+ {t:"Drug–Drug Interaction Prediction",k:"ai",p:"ML system that flags potentially harmful medication combinations.",m:"Covers preprocessing, feature engineering, training and evaluation on real-world pharmaceutical data.",tags:["Python","scikit-learn","Healthcare"]},
+ {t:"Healthcare Document RAG Assistant",k:"ai",p:"LLM assistant that answers questions from healthcare documents.",m:"Document processing, embeddings, vector retrieval and prompt engineering keep answers grounded in the source text.",tags:["LLM","RAG","Embeddings"]},
+ {t:"Nanomaterial Classification",k:"research",p:"Deep learning classification of nanomaterials from SEM images.",m:"TensorFlow models (DenseNet, VGG16) trained on the European NFFA dataset and compared with classification metrics.",tags:["TensorFlow","DenseNet","VGG16"]},
+ {t:"CT Scan Data Platform",k:"web",p:"Web app that automates a manual CT scan pipeline for lab teams.",m:"Built at CompagOS: FastAPI, PostgreSQL, Celery, Redis, with RBAC and real-time job tracking.",tags:["FastAPI","PostgreSQL","Celery"]},
+ {t:"Streamlit Analytics Platform",k:"ai",p:"Interactive analytics suite with 8+ ML algorithms, NLP and dashboards.",m:"Built at ITC: 15,000+ records per second with sub-2 second dashboard response.",tags:["Streamlit","NLP","Dashboards"]}
+];
+const filt=[["all","All"],["ai","AI & ML"],["web","Web & systems"],["research","Research"]];
+const wins=[
+ {co:"IEEE ICCCNT",d:"ieee.org",m:"IEEE",t:"Quantum-Resistant Absolute Zero Trust: A Paradigm Shift in Cybersecurity",s:"First author. Accepted at the 16th International IEEE Conference on Computing, Communication and Networking Technologies."},
+ {co:"AIM 2025",d:"",m:"AI",t:"3rd World Congress on AI in Materials & Manufacturing",s:"Research paper selected for presentation."},
+ {co:"RV University",d:"rvu.edu.in",m:"RV",t:"1st place, Ideathon 2.0 (Cybersecurity)",s:"RV University."},
+ {co:"SJBIT",d:"sjbit.edu.in",m:"SJ",t:"Winner, Ideathon",s:"SJB Institute of Technology (SJBIT), Tech domain."},
+ {co:"IIM Bangalore",d:"iimb.ac.in",m:"IIM",t:"2nd runner up, Case-o-blanca",s:"Case competition at IIM Bangalore."},
+ {co:"RV University",d:"rvu.edu.in",m:"RV",t:"Outstanding Mentorship",s:"Recognised for guiding multiple student projects."}
+];
+const certs=[
+ {co:"Stanford",d:"stanford.edu",m:"S",t:"Machine Learning",s:"Stanford University · June 2024"},
+ {co:"IBM",d:"ibm.com",m:"IBM",t:"Big Data Foundations",s:"IBM · February 2025"},
+ {co:"AWS Academy",d:"aws.amazon.com",m:"AWS",t:"Data Engineering",s:"AWS Academy · October 2025 · 40 hours"}
+];
+const langs="Python,C++,C,Java,SQL,JavaScript,Solidity,Bash,R,HTML,CSS".split(",");
+const tools="Docker,Flask,FastAPI,Git,Node.js,Linux,AWS,Azure,Microsoft SQL,MATLAB,Power BI,TensorFlow,scikit-learn".split(",");
+const answers=[
+ [["experience","work","intern","job"],"I interned at CompagOS (Switzerland, remote) building a CT scan data platform, at ITC Limited on a Streamlit analytics platform, and I’ve been a research assistant at RV University since November 2023."],
+ [["project","built","build"],"Projects include ReachInbox (email outreach), drug–drug interaction prediction, a healthcare RAG assistant and nanomaterial classification. See Selected work."],
+ [["skill","stack","tech","language"],"Python, SQL, C++, Java, JavaScript, plus FastAPI, PostgreSQL, Redis, Docker, TensorFlow, scikit-learn, AWS and Azure."],
+ [["research","paper","publish","ieee","achievement","award","won","win","ideathon","case"],"First-author paper on quantum-resistant zero trust accepted at IEEE ICCCNT, and a paper selected for AIM 2025. I also won the SJBIT Ideathon, took 1st at RV University’s Ideathon 2.0 and was 2nd runner up at IIM Bangalore’s Case-o-blanca."],
+ [["education","study","university","cgpa","college"],"BTech (Hons) in CS with Data Science specialization and a Fintech minor at RV University, 2023–2027. CGPA 8.36."],
+ [["contact","email","hire","reach"],"Email yashmeet1807@gmail.com or message me on LinkedIn (linkedin.com/in/yashmeetbaid)."],
+ [["where","location","live","time"],"Bengaluru, India. The clock on this page runs on IST."]
+];
+/* ===== END CONTENT ===== */
+
+const $=s=>document.querySelector(s),mk=(h)=>{const t=document.createElement("template");t.innerHTML=h.trim();return t.content.firstChild};
+
+/* name */
+$("#name").innerHTML="Yashmeet Baid.".split("").map(c=>c==" "?" ":`<span>${c}</span>`).join("");
+/* clock */
+const tick=()=>{const n=new Date(),o={timeZone:"Asia/Kolkata"};const t=n.toLocaleTimeString("en-GB",{...o,hour12:false});$("#clk").textContent=t;};tick();setInterval(tick,1000);
+/* logos helper: render with monogram fallback */
+function L(o,big){const w=document.createElement("span");w.className="lg"+(big?" xl":"");const m=document.createElement("span");m.textContent=o.m;w.append(m);if(o.d){const i=new Image();i.alt="";i.loading="lazy";i.src=logo(o.d);i.onload=()=>{if(i.naturalWidth>16){m.remove();w.append(i)}};}return w}
+const slot=(o,big)=>{const w=L(o,big);return w};
+/* fields */
+fields.forEach(([t,p])=>{const f=mk(`<div class="field" tabindex="0" role="button"><h3 class="serif">${t}</h3><p>${p}</p></div>`);const tg=()=>f.classList.toggle("open");f.onclick=tg;f.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();tg()}};$("#fieldList").append(f)});
+/* jobs */
+jobs.forEach(j=>{const r=mk(`<div class="job"><div></div><div><h3 class="serif">${j.role}, ${j.co}</h3><div class="when">${j.loc} · ${j.when}</div><ul>${j.pts.map(x=>`<li>${x}</li>`).join("")}</ul></div></div>`);r.firstChild.append(slot(j,true));$("#jobs").append(r)});
+/* projects */
+filt.forEach(([k,n],i)=>{const b=mk(`<button class="${i?"":"on"}">${n}</button>`);b.onclick=()=>{document.querySelectorAll("#filters button").forEach(x=>x.classList.remove("on"));b.classList.add("on");document.querySelectorAll(".card").forEach(c=>c.classList.toggle("hide",k!="all"&&c.dataset.k!=k))};$("#filters").append(b)});
+projects.forEach(p=>{const c=mk(`<div class="card" data-k="${p.k}" tabindex="0" role="button"><h3 class="serif">${p.t}</h3><p>${p.p}</p><p class="more">${p.m}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join("")}</div></div>`);const tg=()=>c.classList.toggle("open");c.onclick=tg;c.onkeydown=e=>{if(e.key=="Enter"){tg()}};
+ c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*5}deg) rotateX(${-y*5}deg)`};c.onmouseleave=()=>c.style.transform="";$("#projGrid").append(c)});
+/* education */
+$("#eduLogo").append(slot({d:"rvu.edu.in",m:"RV"},true));"Data Analysis with Python,Fundamentals of Data Science,Data Engineering,Database Management Systems,Probability & Statistics,Linear Algebra,Design & Analysis of Algorithms,Data Structures,Machine Learning,Generative AI & Prompt Engineering,Cloud Computing & Big Data,GCP Data Analytics,MLOps,Operating Systems,Computer Networks".split(",").forEach(c=>$("#course").append(mk(`<span>${c}</span>`)));
+/* wins & certs */
+const list=(arr,sel)=>arr.forEach(w=>{const r=mk(`<div class="item"><div></div><div><b>${w.t}</b><span>${w.s}</span></div></div>`);r.firstChild.append(slot(w));$(sel).append(r)});list(wins,"#wins");list(certs,"#certs");
+langs.forEach(s=>$("#langs").append(mk(`<span>${s}</span>`)));tools.forEach(s=>$("#tools").append(mk(`<span>${s}</span>`)));
+/* theme */
+const root=document.documentElement;let th;try{th=localStorage.getItem("th")}catch(e){}
+if(!th)th=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";root.dataset.theme=th;
+$("#theme").onclick=()=>{th=th=="dark"?"light":"dark";root.dataset.theme=th;try{localStorage.setItem("th",th)}catch(e){}};
+/* active nav */
+const links=[...document.querySelectorAll("nav a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("header,section").forEach(s=>io.observe(s));
+/* magnetic buttons */
+document.querySelectorAll(".mag").forEach(b=>{b.onmousemove=e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.3}px)`};b.onmouseleave=()=>b.style.transform=""});
+/* dot grid hero */
+const cv=$("#dots"),cx=cv.getContext("2d"),still=matchMedia("(prefers-reduced-motion:reduce)").matches;let W,H,mx=-999,my=-999,raf;
+const draw=()=>{cx.clearRect(0,0,W,H);const rgb=getComputedStyle(root).getPropertyValue("--dot"),g=26;for(let x=g/2;x<W;x+=g)for(let y=g/2;y<H;y+=g){const d=Math.hypot(x-mx,y-my),k=Math.max(0,1-d/160),r=1.2+k*4.5,ox=d<160&&d>0?(x-mx)/d*k*10:0,oy=d<160&&d>0?(y-my)/d*k*10:0;cx.fillStyle=`rgba(${rgb},${.18+k*.6})`;cx.beginPath();cx.arc(x+ox,y+oy,r,0,7);cx.fill()}raf=0};
+const sz=()=>{const r=cv.getBoundingClientRect(),dpr=devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);draw()};sz();addEventListener("resize",sz);
+if(!still){$("#top").addEventListener("mousemove",e=>{const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;if(!raf)raf=requestAnimationFrame(draw)});$("#top").addEventListener("mouseleave",()=>{mx=my=-999;draw()});$("#theme").addEventListener("click",()=>setTimeout(draw,30))}
+/* ask my site */
+const ask=$("#ask"),qi=$("#q");const open=()=>{ask.classList.add("on");qi.focus()},close=()=>ask.classList.remove("on");
+$("#askBtn").onclick=open;ask.onclick=e=>{if(e.target==ask)close()};
+addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()=="k"){e.preventDefault();open()}if(e.key=="Escape")close()});
+const reply=q=>{q=q.toLowerCase();const m=answers.find(a=>a[0].some(k=>q.includes(k)));$("#ans").textContent=m?m[1]:"I can talk about experience, projects, skills, research, education or how to contact Yashmeet."};
+qi.onkeydown=e=>{if(e.key=="Enter")reply(qi.value)};
+["Experience","Projects","Skills","Research","Education","Contact"].forEach(s=>{const b=mk(`<button>${s}</button>`);b.onclick=()=>{qi.value=s;reply(s)};$("#sug").append(b)});
+</script>
+</body>
+</html>
